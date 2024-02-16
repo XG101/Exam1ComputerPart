@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (3 pts)
+# DONE: 1. (3 pts)
 #
 #   In this module, we are going to create a program that will allow a user to
 #   do a simple mad lib.
@@ -28,8 +28,13 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def get_word(part_of_speech):
+    speech = input(f"Please enter a(n) {part_of_speech}: ")
+    return speech
+
+
 ###############################################################################
-# TODO: 2. (3 pts)
+# DONE: 2. (3 pts)
 #
 #   Now, write a function called name() that simply asks the user to enter
 #   their name and return the name they enter.
@@ -42,9 +47,12 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def name():
+    user_name = input("Please enter your name: ")
+    return user_name
 
 ###############################################################################
-# TODO: 3. (9 pts)
+# DONE: 3. (9 pts)
 #
 #   Now, let's put it all together.
 #
@@ -68,3 +76,12 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def main():
+    print("Let's play Mad Libs!")
+    name()
+    noun = get_word("Noun")
+    verb = get_word("Verb ending in -ing")
+    adjective = get_word("Adjective")
+    print(f"This semester, I hope to join the {noun} club and go {verb}. It is going to be a(n) {adjective} semester!")
+main()
